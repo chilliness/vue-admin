@@ -1,0 +1,81 @@
+body,
+p,
+dd,
+dl,
+form,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+ul,
+ol,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+b,
+strong {
+  font-weight: normal;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+a,
+s {
+  outline: 0 none;
+  text-decoration: none;
+}
+
+img {
+  border: 0 none;
+  vertical-align: top;
+}
+
+button,
+input {
+  outline: 0 none;
+  border: 0 none;
+  border-radius: 0;
+  appearance: none;
+}
+
+textarea {
+  resize: none;
+  outline: 0 none;
+  overflow: auto;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  overflow: hidden;
+  -webkit-text-size-adjust: none;
+}
+
+html * {
+  -webkit-tap-highlight-color: transparent;
+}

@@ -1,0 +1,7 @@
+// 用于配置全局变量和mixin，默认加载到全局，因此.vue文件中开箱即用(不需导入)
+
+@mixin dot {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
