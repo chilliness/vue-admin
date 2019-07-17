@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    A blank project
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'App'
+};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss"></style>

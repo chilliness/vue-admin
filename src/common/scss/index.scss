@@ -1,1 +1,70 @@
-@import "./reset";
+@import '../fonts/iconfont.css';
+@import './reset.scss';
+
+// 样式覆盖
+.menu-wrap {
+  .el-scrollbar__wrap {
+    @include frow(flex-start, stretch);
+    margin-right: -17px;
+    margin-bottom: -17px;
+    overflow-x: hidden;
+    .iconfont {
+      display: inline-block;
+      line-height: 1;
+      margin-right: 5px;
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .el-menu--collapse {
+      .el-tooltip,
+      .el-submenu__title {
+        padding: 0 14px !important;
+      }
+    }
+    .el-menu-item,
+    .el-submenu__title {
+      padding-left: 14px !important;
+    }
+    .el-submenu {
+      .el-menu--inline {
+        span {
+          padding-left: 28px !important;
+        }
+      }
+      .el-submenu__icon-arrow {
+        margin-right: 10px !important;
+      }
+    }
+  }
+}
+
+.tag-wrap {
+  .el-scrollbar {
+    height: 100%;
+  }
+  .el-scrollbar__wrap {
+    margin-right: -17px;
+    margin-bottom: -17px;
+    overflow-x: hidden;
+  }
+}
+
+.el-upload-list__item-name {
+  .el-icon-document:before {
+    display: none;
+  }
+}
+
+// elm表格某些样式覆盖
+._inline-block {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+// 加载等待层
+.el-loading-mask {
+  .el-icon-loading {
+    font-size: 60px;
+  }
+}
