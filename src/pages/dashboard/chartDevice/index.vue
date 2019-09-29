@@ -8,7 +8,7 @@
         <el-button type="primary" size="mini" @click="handleFetchData">查询</el-button>
       </el-form-item>
     </el-form>
-    <div class="chart-box" style="width: 100%; height: 600px;" ref="echartMonth"></div>
+    <div class="chart-box" style="width: 100%; height: 600px;" ref="echartMonthRef"></div>
   </div>
 </template>
 
@@ -41,7 +41,7 @@ export default {
   methods: {
     handleInitEcharts() {
       this.$nextTick(
-        () => (this._echartMonth = echarts.init(this.$refs.echartMonth))
+        () => (this._echartMonth = echarts.init(this.$refs.echartMonthRef))
       );
     },
     async handleFetchData() {

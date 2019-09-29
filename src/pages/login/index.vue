@@ -2,7 +2,7 @@
   <div class="login-wrap">
     <div class="login-box">
       <div class="title">后台管理系统</div>
-      <el-form class="form" :model="form" :rules="rules" ref="form">
+      <el-form class="form" :model="form" :rules="rules" ref="formRef">
         <el-form-item prop="username">
           <el-input v-model.trim="form.username" placeholder="请输入用户名">
             <el-button slot="prepend" icon="iconfont icon-person"></el-button>
@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     handleLogin() {
-      this.$refs.form.validate(async valid => {
+      this.$refs.formRef.validate(async valid => {
         if (!valid || this.isAjax) {
           return;
         }

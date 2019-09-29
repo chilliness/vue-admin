@@ -76,7 +76,7 @@
     </el-dialog>
     <el-dialog title="修改头像" center width="350px" :visible="avatarForm.flag" @close="avatarForm.flag = false">
       <el-form>
-        <el-upload action :auto-upload="false" :on-change="handleChange" list-type="picture" accept="image/*" ref="upload">
+        <el-upload action :auto-upload="false" :on-change="handleChange" list-type="picture" accept="image/*" ref="uploadRef">
           <el-button slot="trigger" size="small" type="primary">上传头像</el-button>
           <el-button style="margin-left: 10px;" size="small" type="success" @click="handleUpdateAvatar">提交</el-button>
         </el-upload>
@@ -233,7 +233,7 @@ export default {
       }
     },
     async handleUpdateAvatar() {
-      let file = this.$refs.upload.uploadFiles[0] || {};
+      let file = this.$refs.uploadRef.uploadFiles[0] || {};
       if (!file.raw) {
         return this.$message.error('请上传头像');
       }
